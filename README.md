@@ -36,7 +36,7 @@ This app uses [**MVVM (Model View View-Model)**](https://developer.android.com/j
 ## Contact
 If you need any help, you can connect with me.
 
-Visit:- [shreyaspatil.dev](https://shreyaspatil.dev)
+Visit:- [kevinserrano.dev](https://twitter.com/iKevinDev)
 
 
 
