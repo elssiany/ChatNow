@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+          name="data"
+          type="com.dkbrothers.apps.chatsnow.models.Conversation" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="@dimen/_16dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            app:layout_constraintBottom_toBottomOf="@+id/tv_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_short_message"
+            android:padding="@dimen/_10dp"
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/img"
+            android:elevation="@dimen/_6dp"
+            android:background="@drawable/shape_rounded_r16"
+            android:layout_width="@dimen/_80dp"
+            android:layout_height="@dimen/_80dp"
+            android:contentDescription="@null" />
+
+
+        <TextView
+            android:lines="1"
+            android:singleLine="true"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tv_date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@{data.title}"
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="90dp"
+            android:layout_marginEnd="@dimen/_50dp"
+            android:gravity="center|start"
+            android:lineSpacingExtra="4sp"
+            android:layout_marginTop="@dimen/_24dp"
+            android:paddingBottom="@dimen/_0dp"
+            android:textSize="@dimen/_16sp"
+            android:textColor="@color/negro"
+            tools:text="Carlos Parra Sertf" />
+        <TextView
+            android:textColor="@{safeUnbox(data.isNewMessage)?@color/negro:@color/gris_808080}"
+            android:text="@{data.lastShortMessage}"
+            android:layout_marginTop="@dimen/_2dp"
+            android:id="@+id/tv_short_message"
+            android:paddingTop="@dimen/_0dp"
+            android:paddingBottom="@dimen/_24dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_date"
+            app:layout_constraintStart_toStartOf="@+id/tv_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:singleLine="true"
+            android:lineSpacingExtra="4sp"
+            tools:text="Bla bla bla bla bla bla..." />
+        <TextView
+            app:layout_constraintTop_toTopOf="@+id/tv_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@{data.date}"
+            android:id="@+id/tv_date"
+            android:layout_marginStart="@dimen/_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#808080"
+            android:lineSpacingExtra="4sp"
+            tools:text="12:09 PM" />
+        <TextView
+            app:layout_constraintTop_toBottomOf="@+id/tv_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="@{safeUnbox(data.isNewMessage)?View.VISIBLE:View.GONE, default = gone}"
+            android:text="@string/nuevo"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="@dimen/_10dp"
+            android:id="@+id/tv_status"
+            android:layout_marginStart="@dimen/_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/blanco"
+            android:lineSpacingExtra="4sp"
+            tools:visibility="visible"
+            tools:text="Nuevo" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

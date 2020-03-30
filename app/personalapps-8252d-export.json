@@ -1,0 +1,70 @@
+{
+  "conversations" : {
+    "syVic2ZqfzOxF9KrmM4eRoWicxR2" : {
+      "syVic2ZqfzOxF9KrmM4eRoWicx" : {
+        "isNewMessage" : false,
+        "lastShortMessage" : "Mensaje Prueba",
+        "lastTimestampMessage" : 1585521839000,
+        "title" : "Kҽʋιɳ Sҽɾɾαɳσ",
+        "urlPhoto" : "fsggdfgd"
+      }
+    },
+    "9ESMuyjUyZUSyweeRjy0Kh43WsW2" : {
+      "syVic2ZqfzOxF9KrmM4eRoWicx" : {
+        "isNewMessage" : true,
+        "lastShortMessage" : "Mensaje Prueba",
+        "lastTimestampMessage" : 1585521839000,
+        "title" : "DKBrother Studio",
+        "urlPhoto" : "fsggdfgd"
+      }
+    }
+  },
+  "conversation-details" : {
+    "syVic2ZqfzOxF9KrmM4eRoWicxR2" : {
+      "syVic2ZqfzOxF9KrmM4eRoWicx" : {
+        "isNewMessage" : false,
+        "lastShortMessage" : "Mensaje Prueba",
+        "lastTimestampMessage" : 1585521839000,
+        "title" : "Kҽʋιɳ Sҽɾɾαɳσ",
+        "urlPhoto" : "fsggdfgd"
+      }
+    },
+    "9ESMuyjUyZUSyweeRjy0Kh43WsW2" : {
+      "syVic2ZqfzOxF9KrmM4eRoWicx" : {
+        "isNewMessage" : true,
+        "lastShortMessage" : "Mensaje Prueba",
+        "lastTimestampMessage" : 1585521839000,
+        "title" : "DKBrother Studio",
+        "urlPhoto" : "fsggdfgd"
+      }
+    }
+  },
+  "public-profile" : {
+    "9ESMuyjUyZUSyweeRjy0Kh43WsW2" : {
+      "cC" : "W",
+      "n" : "Kҽʋιɳ Sҽɾɾαɳσ",
+      "p" : "https://lh3.googleusercontent.com/a-/AOh14GgFShKQvrBSOqg1jcpFsUhswqtuf0hfxxwi-iN08w=s96-c"
+    },
+    "syVic2ZqfzOxF9KrmM4eRoWicxR2" : {
+      "cC" : "W",
+      "n" : "DKBrother Studio",
+      "p" : "https://lh3.googleusercontent.com/a-/AOh14Ghrey14-VtuRLgbuigbGyW_g_7yY-YbKOgjjuCm=s96-c"
+    }
+  },
+  "users" : {
+    "9ESMuyjUyZUSyweeRjy0Kh43WsW2" : {
+      "cC" : "W",
+      "e" : "kevin.s.9932@gmail.com",
+      "idT" : "fLLPApi8ojs:APA91bEVqCRADoZI1DuECFNgldL51wAqO6C04Hg6JHCDR47sha0XziqQDKE1gzMQ4ZxaYKftAythynoejlwMUAs3yJTkzt678Rel0Ut3V_Wti2WdVy3GvpGFOh3TP9CPNhRXQCLW5VwA",
+      "n" : "Kҽʋιɳ Sҽɾɾαɳσ",
+      "p" : "https://lh3.googleusercontent.com/a-/AOh14GgFShKQvrBSOqg1jcpFsUhswqtuf0hfxxwi-iN08w=s96-c"
+    },
+    "syVic2ZqfzOxF9KrmM4eRoWicxR2" : {
+      "cC" : "W",
+      "e" : "dkbrotherstudio@gmail.com",
+      "idT" : "fM49hmD01HU:APA91bFQ2zWri8lOfLbjMxZ-w6ruL7FsXWGU3BMOi7KDdifDSWDAWwRHxBy8VtbiZhdBwj6IYW0aKGspqjJtScjZ79JDz-_YOdAI09pE9uZOsH8T9zcMQzBqk8Uje02wWKpmu1O7m-vM",
+      "n" : "DKBrother Studio",
+      "p" : "https://lh3.googleusercontent.com/a-/AOh14Ghrey14-VtuRLgbuigbGyW_g_7yY-YbKOgjjuCm=s96-c"
+    }
+  }
+}

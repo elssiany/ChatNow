@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "616248880312",
+    "firebase_url": "https://personalapps-8252d.firebaseio.com",
+    "project_id": "personalapps-8252d",
+    "storage_bucket": "personalapps-8252d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:616248880312:android:6f638d72018820136a984d",
+        "android_client_info": {
+          "package_name": "com.dkbrothers.apps.chatsnow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "616248880312-58ovhhfghqghmhjuk2dncnlg0b2fus2n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQL3TBVT8N-VBu2tbW6Lnv8MJJTxD5RlM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "616248880312-58ovhhfghqghmhjuk2dncnlg0b2fus2n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

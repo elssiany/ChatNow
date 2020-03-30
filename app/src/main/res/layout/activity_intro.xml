@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:background="@color/colorPrimary"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ui.IntroActivity">
+
+    <LinearLayout
+        android:layout_margin="16dp"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".activities.IntroActivity">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="150dp"
+            android:layout_height="150dp" />
+
+        <TextView
+            android:textStyle="bold"
+            android:textColor="@color/blanco"
+            android:layout_marginBottom="16dp"
+            android:id="@+id/txt_msm"
+            android:text="Bienvenido a ChatNow"
+            android:textSize="18sp"
+            android:typeface="serif"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:layout_marginBottom="50dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <CheckBox
+                android:layout_gravity="center"
+                style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+                android:id="@+id/chb_term_and_cond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textColor="@color/blanco"
+                android:textColorLink="@color/colorAccent"
+                android:layout_marginStart="12dp"
+                android:id="@+id/txt_term_cond"
+                android:text="@string/p_de_p"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <com.google.android.gms.common.SignInButton
+            android:tag="0"
+            android:textColor="@color/negro"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"
+            android:id="@+id/sign_in_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp" />
+
+    </LinearLayout>
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:clickable="true"
+        android:visibility="gone"
+        android:padding="120dp"
+        android:background="@color/blanco_trasparente_88"
+        android:id="@+id/contentLoadingProgressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        tools:targetApi="lollipop" />
+
+</FrameLayout>

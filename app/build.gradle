@@ -1,0 +1,106 @@
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+//procesador de anotaciones para usar con
+// bibliotecas como Dagger o Data Binding en proyectos de Kotlin.
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    signingConfigs {
+        config {
+            storeFile project.KEYSTORE_STORE_FILE
+            storePassword project.KEYSTORE_STORE_PASSWORD
+            keyAlias project.KEYSTORE_KEY_ALIAS
+            keyPassword project.KEYSTORE_KEY_PASSWORD
+        }
+    }
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+    defaultConfig {
+        applicationId APP_ID
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode Integer.valueOf(MOBILE_VERSION_CODE)
+        versionName MOBILE_VERSION_NAME
+        //vectorDrawables.useSupportLibrary = true
+        resConfigs "en", "es", "pt"/*Esto eliminará todos los recursos que no están destinados
+        a estas dos configuraciones de idioma.*/
+        buildConfigField 'String', 'KEY_SECRET', '"TeamS90870*Ny"'
+        buildConfigField 'String', 'KeyFCM', KEY_FCM
+        signingConfig signingConfigs.config
+    }
+
+    buildTypes {
+        release {
+            multiDexEnabled true
+            minifyEnabled true /*Intentará eliminar todas las clases y miembros de la clase que
+            no se usen, así como cambiar el nombre de cualquier identificador que use nombres más cortos.
+             Ambas operaciones hacen que el código resultante sea más pequeño, pero este último puede hacer
+            que la depuración resulte engorrosa, por lo que le sugiero que solo habilite la minificación
+             para su tipo de versión de lanzamiento*/
+            shrinkResources true
+            //elimina recursos que no se estan usando como imagenes y entre otros documentos del APK
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dataBinding {
+        enabled = true
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "ChatNow(v${variant.name.capitalize()}).apk"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Todo----------------------Architecture Components---------------
+    //implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    // ViewModel
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    // LiveData
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+
+
+    //Todo---------------------- Libraries UI------------------------
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.core:core-ktx:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+
+    //Todo-----------Sdks Firebase -->https://firebase.google.com/support/release-notes/android
+    //Firebase Analitics
+    implementation 'com.google.firebase:firebase-analytics:17.2.3'
+    // Crashlitics --> https://firebase.google.com/docs/crashlytics/customize-crash-reports?platform=android
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
+    implementation 'com.google.firebase:firebase-database:19.2.1'
+    implementation 'com.google.firebase:firebase-auth:19.3.0'
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+
+
+    //Todo --------------------------Others Libraries------------------------
+    //Get images
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    kapt 'com.github.bumptech.glide:compiler:4.11.0'
+
+
+}

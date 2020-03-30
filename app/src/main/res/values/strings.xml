@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">ChatsNow</string>
+
+    <string name="key_preferences">data_chatnow</string>
+
+
+    <string name="p_de_p"><![CDATA[Por favor, lea nuestras <a href="https://drive.google.com/file/d/1ubcFSOsk587HHmPwhrH4DQzsapP1FfNT/view">políticas de privacidad</a> antes de registrarse.]]></string>
+    <string name="message_12">Para usar la app, debe aceptar los términos</string>
+    <string name="message_13">La aplicación no es compatible con este dispositivo móvil</string>
+
+
+    <!-- ........................... messages warning .....................................  -->
+
+    <string name="message_warning_1">Por favor, introduzca una altura válida</string>
+    <string name="message_warning_2">Hay una nueva actualización disponible, por favor descargala, para seguir disfrutando de nuevas funcionalidades</string>
+    <string name="message_warning_3">No tienes acceso a internet, por favor revisa la red de internet de tu smartphone.</string>
+
+
+    <!-- ........................... messages errors .....................................  -->
+
+    <string name="message_error_1">Sin conexión a internet :(</string>
+    <string name="message_error_2">Error :( …intente más tarde por favor</string>
+    <string name="message_error_3">Autenticación fallida, intente más tarde por favor.</string>
+    <string name="message_error_4">No se puede iniciar sesión en estos momentos, intenta más tarde por favor</string>
+    <string name="loading">Cargando…</string>
+    <string name="verificando">Verificando…</string>
+    <string name="comenzar">Comenzar</string>
+    <string name="continuar">Continuar</string>
+    <string name="sincronizando_datos">Sincronizando datos</string>
+    <string name="mis_chats">Mis chats</string>
+    <string name="no_disponible_en_estos_momentos">No disponible en estos momentos</string>
+    <string name="nuevo">Nuevo</string>
+
+
+</resources>
