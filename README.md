@@ -6,7 +6,7 @@ ChatNow is a sample chat Android application 📱 built to demonstrate use of mo
 
 **You can Install and test latest app 👇**
 
-[![ChatNow App](https://img.shields.io/badge/ChatNow%F0%9F%93%A8%F0%9F%93%B2-APK-brightgreen.svg?style=for-the-badge&logo=android)](https://github.com/ikevinsm/ChatNow/blob/master/apk/ChatNow.apk)
+[![ChatNow App](https://img.shields.io/badge/ChatNow%F0%9F%93%A8%F0%9F%93%B2-APK-brightgreen.svg?style=for-the-badge&logo=android)](https://github.com/ikevinsm/ChatNow/raw/master/apk/ChatNow.apk)
 
 ## About
 It simply loads API MESSAGE data and stores it in persistence storage (i.e. noSQLite Firebase Database). Messages will always be loaded from the local Firebase database. Remote data (from the Firebase Realtime API) and local data are always synchronized automatically by Firebase Realtime.
