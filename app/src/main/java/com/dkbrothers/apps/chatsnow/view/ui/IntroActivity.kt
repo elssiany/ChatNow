@@ -53,22 +53,24 @@ class IntroActivity : BaseActivity() {
         // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
         if (requestCode == LoginGoogle.RC_SIGN_IN) {
             val result = Auth.GoogleSignInApi.getSignInResultFromIntent(data)
-            if (result.isSuccess) { //Google Sign In was successful, authenticate with Firebase
-                val account = result.signInAccount
-                Toast.makeText(applicationContext, getString(R.string.verificando), Toast.LENGTH_SHORT).show()
-                //para registrar un nuevo usuario premium
-                loginGoogle!!.firebaseAuthWithGoogle(account!!)
-            } else { //Google Sign In failed, update UI appropriately
-                hideContentLoadingProgressBar()
-                Crashlytics.log(Log.ERROR, TAG,
-                    "Google Sign In failed-statusCode:" + result.status.statusCode)
-                Toast.makeText(
-                    this@IntroActivity,
-                    R.string.message_error_3, Toast.LENGTH_LONG
-                ).show()
-                // [START_EXCLUDE]
-//updateUI(null);
-// [END_EXCLUDE]
+            if (result != null) {
+                if (result.isSuccess) { //Google Sign In was successful, authenticate with Firebase
+                    val account = result.signInAccount
+                    Toast.makeText(applicationContext, getString(R.string.verificando), Toast.LENGTH_SHORT).show()
+                    //para registrar un nuevo usuario premium
+                    loginGoogle!!.firebaseAuthWithGoogle(account!!)
+                } else { //Google Sign In failed, update UI appropriately
+                    hideContentLoadingProgressBar()
+                    Crashlytics.log(Log.ERROR, TAG,
+                        "Google Sign In failed-statusCode:" + result.status.statusCode)
+                    Toast.makeText(
+                        this@IntroActivity,
+                        R.string.message_error_3, Toast.LENGTH_LONG
+                    ).show()
+                    // [START_EXCLUDE]
+        //updateUI(null);
+        // [END_EXCLUDE]
+                }
             }
         }
     }
